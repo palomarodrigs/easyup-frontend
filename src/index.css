@@ -5,3 +5,8 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+::selection {
+  background-color: #03c988;
+  color: #ffff;
+}
