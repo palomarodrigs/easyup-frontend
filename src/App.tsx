@@ -1,13 +1,23 @@
 import { Header } from './components/header'
 import { Footer } from './components/footer'
 import { Description } from './components/description'
+import { FileInput } from './components/file-input'
 
 export function App() {
+  const onSubmit = () => {}
   return (
-    <main className="flex flex-col justify-between px-[50px] min-h-screen bg-grey-600">
+    <main className="min-h-screen px-[50px] bg-grey-600">
       <Header />
-      <Description />
-      <Footer />
+
+      <section className="flex flex-col items-center gap-10">
+        <Description />
+
+        <form onSubmit={onSubmit}>
+          <FileInput />
+        </form>
+
+        <Footer />
+      </section>
     </main>
   )
 }
