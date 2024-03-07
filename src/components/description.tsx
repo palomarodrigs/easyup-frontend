@@ -5,7 +5,7 @@ export function Description() {
         Image to Text Converter with <span className="text-mint-200">AI</span>
       </h2>
 
-      <p className="text-grey-100 text-sm lg:text-base text-center leading-relaxed">
+      <p className="lg:max-w-[350px] text-grey-100 text-sm text-center leading-relaxed">
         Convert images to text with ease! Upload your image and get converted text
         instantly with a simple tap.
       </p>
