@@ -1,4 +1,4 @@
-export function Description() {
+export function Hero() {
   return (
     <section className="flex flex-col items-center gap-[4px]">
       <h2 className="text-xl lg:text-2xl text-white-100 font-semibold">

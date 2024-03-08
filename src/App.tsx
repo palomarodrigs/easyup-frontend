@@ -1,6 +1,6 @@
 import { Header } from './components/header'
 import { Footer } from './components/footer'
-import { Description } from './components/description'
+import { Hero } from './components/hero'
 import { FileInput } from './components/file-input'
 
 export function App() {
@@ -10,7 +10,7 @@ export function App() {
       <Header />
 
       <section className="flex flex-col items-center gap-10">
-        <Description />
+        <Hero />
 
         <form onSubmit={onSubmit}>
           <FileInput />
