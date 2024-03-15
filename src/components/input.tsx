@@ -39,7 +39,7 @@ export function Input({ dropzone }: InputProps) {
 
           <p className="flex items-center gap-1 text-xs text-grey-200">
             <Info size={15} className="text-grey-200" />
-            Supported formats: JPG, PNG
+            Supported format: PNG
           </p>
         </div>
       </label>
