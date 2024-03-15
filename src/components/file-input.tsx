@@ -24,7 +24,6 @@ export function FileInput() {
   const dropzone = useDropzone({
     onDrop,
     accept: {
-      'image/jpeg': ['.jpeg', '.jpg'],
       'image/png': ['.png'],
     },
   })
