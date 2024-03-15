@@ -10,3 +10,16 @@ body {
   background-color: #03c988;
   color: #ffff;
 }
+
+::-webkit-scrollbar {
+  width: 0.45rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #565e6d;
+  border-radius: 999px;
+}
