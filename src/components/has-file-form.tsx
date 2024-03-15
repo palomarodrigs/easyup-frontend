@@ -41,8 +41,13 @@ export function HasFileForm({ imageFile, removeFile, onImageUploaded }: HasFileP
             {imageFile?.name}
           </span>
 
-          <button type="button" onClick={removeFile}>
-            <X className="text-grey-100 hover:text-red-500 transition-colors" size={20} />
+          <button
+            disabled={isLoading}
+            type="button"
+            onClick={removeFile}
+            className="text-grey-100 enabled:hover:text-red-500 transition-colors disabled:cursor-not-allowed"
+          >
+            <X size={20} />
           </button>
         </div>
 
@@ -52,7 +57,7 @@ export function HasFileForm({ imageFile, removeFile, onImageUploaded }: HasFileP
             type="submit"
             className="bg-mint-200 hover:bg-mint-100 text-white-100 py-2 px-8 rounded-md cursor-pointer transition-colors disabled:cursor-not-allowed disabled:bg-mint-200/60"
           >
-            {isLoading ? 'Loading...' : 'Convert'}
+            {isLoading ? 'Converting...' : 'Convert'}
           </button>
         </div>
       </div>
