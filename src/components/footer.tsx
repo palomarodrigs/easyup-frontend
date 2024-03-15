@@ -1,7 +1,9 @@
+import { Divider } from './divider'
+
 export function Footer() {
   return (
     <footer className="fixed bottom-0 w-full px-[50px]">
-      <div className="border border-grey-300" />
+      <Divider />
 
       <p className="text-grey-100 text-sm text-center p-5">
         developed with 💚 by{' '}

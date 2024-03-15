@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { CopyToClipboard } from './copy-to-clipboard'
+import { Divider } from './divider'
 import ReactMarkdown from 'react-markdown'
 
 interface TranscriptionDisplayProps {
@@ -41,7 +42,7 @@ export function GeneratedTranscription({
           <CopyToClipboard transcription={transcription} />
         </article>
 
-        <div className="w-full border border-grey-300" />
+        <Divider />
 
         <div className="max-h-[150px] overflow-auto text-justify text-white-200 pr-2">
           <ReactMarkdown>{completion}</ReactMarkdown>
