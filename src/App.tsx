@@ -4,7 +4,6 @@ import { Hero } from './components/hero'
 import { FileInput } from './components/file-input'
 
 export function App() {
-  const onSubmit = () => {}
   return (
     <main className="min-h-screen px-[50px] bg-grey-600">
       <Header />
@@ -12,9 +11,7 @@ export function App() {
       <section className="flex flex-col items-center gap-10">
         <Hero />
 
-        <form onSubmit={onSubmit}>
-          <FileInput />
-        </form>
+        <FileInput />
 
         <Footer />
       </section>
