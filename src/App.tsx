@@ -5,16 +5,17 @@ import { FileInput } from './components/file-input'
 
 export function App() {
   return (
-    <main className="min-h-screen px-[50px] bg-grey-600">
-      <Header />
+    <main className="flex flex-col min-h-screen">
+      <section className="flex-grow px-[50px]">
+        <Header />
 
-      <section className="flex flex-col items-center gap-10">
-        <Hero />
-
-        <FileInput />
-
-        <Footer />
+        <div className="flex flex-col items-center gap-10">
+          <Hero />
+          <FileInput />
+        </div>
       </section>
+
+      <Footer />
     </main>
   )
 }
