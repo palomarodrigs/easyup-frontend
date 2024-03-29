@@ -1,7 +1,7 @@
 export function Hero() {
   return (
     <section className="flex flex-col items-center gap-[4px]">
-      <h2 className="text-xl lg:text-2xl text-white-100 font-semibold">
+      <h2 className="text-lg lg:text-2xl text-white-100 font-semibold">
         Image to Text Converter with <span className="text-mint-200">AI</span>
       </h2>
 
