@@ -1,6 +1,8 @@
 import { X } from 'lucide-react'
 import { FormEvent, useState } from 'react'
 import { api } from '../lib/axios'
+import { toast } from 'react-toastify'
+import { Spinner } from './spinner'
 
 interface HasFileProps {
   imageFile: File | null
@@ -15,6 +17,7 @@ export function HasFileForm({ imageFile, removeFile, onImageUploaded }: HasFileP
     event.preventDefault()
 
     if (!imageFile) {
+      toast.error('Please select an image to upload')
       return
     }
 
@@ -23,12 +26,22 @@ export function HasFileForm({ imageFile, removeFile, onImageUploaded }: HasFileP
     const data = new FormData()
     data.append('file', imageFile)
 
-    const response = await api.post('/upload', data)
-    const imageId = response.data.image.id
+    try {
+      const response = await api.post('/upload', data)
+      const imageId = response.data.image.id
 
-    const generateTranscription = await api.post(`/upload/${imageId}/transcription`)
-    const transcription = generateTranscription.data.transcription
-    onImageUploaded(transcription)
+      const generateTranscription = await api.post(`/upload/${imageId}/transcription`)
+      const transcription = generateTranscription.data.transcription
+
+      onImageUploaded(transcription)
+
+      toast.success('Image uploaded successfully')
+    } catch (error) {
+      toast.error('Failed to upload image. Please try again later')
+      setIsLoading(false)
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -57,7 +70,15 @@ export function HasFileForm({ imageFile, removeFile, onImageUploaded }: HasFileP
             type="submit"
             className="bg-mint-200 hover:bg-mint-100 text-white-100 py-2 px-8 rounded-md cursor-pointer transition-colors disabled:cursor-not-allowed disabled:bg-mint-200/60"
           >
-            {isLoading ? 'Converting...' : 'Convert'}
+            {isLoading ? (
+              <div className="flex gap-1 items-center">
+                <Spinner className="animate-spin w-5 h-5" />
+
+                <p>Uploading</p>
+              </div>
+            ) : (
+              <p>Upload</p>
+            )}
           </button>
         </div>
       </div>
