@@ -10,7 +10,7 @@ export function Footer() {
         <a
           href="https://github.com/palomarodrigs"
           target="_blank"
-          className="underline hover:decoration-mint-100 duration-200"
+          className="underline hover:decoration-mint-100 duration-200 focus:outline-none focus:ring-2 focus:ring-mint-200 focus:ring-offset-2 focus:ring-offset-grey-400 rounded-sm"
         >
           Paloma Rodrigues
         </a>

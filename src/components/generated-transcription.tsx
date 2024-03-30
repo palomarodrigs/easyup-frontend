@@ -24,7 +24,7 @@ export function GeneratedTranscription({
       if (i > transcription.length) {
         clearInterval(interval)
       }
-    }, 15)
+    }, 10)
 
     return () => {
       clearInterval(interval)
@@ -52,7 +52,7 @@ export function GeneratedTranscription({
       <div className="flex justify-end">
         <button
           onClick={() => onRestart()}
-          className="p-2 bg-grey-400 hover:bg-grey-200/30 text-white-100 rounded-md duration-200"
+          className="p-2 bg-grey-400 hover:bg-grey-200/30 text-white-100 rounded-md duration-200 focus:outline-none focus:ring-2 focus:ring-mint-200 focus:ring-offset-2 focus:ring-offset-grey-400"
         >
           Start over
         </button>

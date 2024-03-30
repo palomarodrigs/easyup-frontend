@@ -58,7 +58,7 @@ export function HasFileForm({ imageFile, removeFile, onImageUploaded }: HasFileP
             disabled={isLoading}
             type="button"
             onClick={removeFile}
-            className="text-grey-100 enabled:hover:text-red-500 transition-colors disabled:cursor-not-allowed"
+            className="text-grey-100 enabled:hover:text-red-500 transition-colors disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-grey-400 rounded-sm"
           >
             <X size={20} />
           </button>
@@ -68,7 +68,7 @@ export function HasFileForm({ imageFile, removeFile, onImageUploaded }: HasFileP
           <button
             disabled={isLoading}
             type="submit"
-            className="bg-mint-200 hover:bg-mint-100 text-white-100 py-2 px-8 rounded-md cursor-pointer transition-colors disabled:cursor-not-allowed disabled:bg-mint-200/60"
+            className="bg-mint-200 hover:bg-mint-100 text-white-100 py-2 px-8 rounded-md cursor-pointer transition-colors disabled:cursor-not-allowed disabled:bg-mint-200/60 focus:outline-none focus:ring-2 focus:ring-mint-200 focus:ring-offset-2 focus:ring-offset-grey-400"
           >
             {isLoading ? (
               <div className="flex gap-1 items-center">
