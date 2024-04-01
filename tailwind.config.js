@@ -23,6 +23,27 @@ export default {
           200: '#03C988',
         },
       },
+
+      keyframes: {
+        slideIn: {
+          from: { transform: 'translateX(100px)', opacity: 0 },
+          to: { transform: 'translateX(0)', opacity: 1 },
+        },
+        topDown: {
+          from: { transform: 'translateY(-50px)', opacity: 0 },
+          to: { transform: 'translateY(0)', opacity: 1 },
+        },
+        downTop: {
+          from: { transform: 'translateY(50px)', opacity: 0 },
+          to: { transform: 'translateY(0)', opacity: 1 },
+        },
+      },
+
+      animation: {
+        slideIn: 'slideIn 500ms ease-in',
+        topDown: 'topDown 300ms linear',
+        downTop: 'downTop 400ms linear',
+      },
     },
     plugins: [],
   },

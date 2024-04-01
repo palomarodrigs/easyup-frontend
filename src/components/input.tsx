@@ -5,12 +5,17 @@ interface InputProps {
   dropzone: DropzoneState
 }
 
+interface InputProps {
+  dropzone: DropzoneState
+}
+
 export function Input({ dropzone }: InputProps) {
   const { getRootProps, getInputProps, isDragActive } = dropzone
+
   return (
     <div
       {...getRootProps()}
-      className={`w-[320px] lg:w-[500px] h-full rounded-lg border-dashed border-2 hover:border-mint-100 hover:bg-grey-500 duration-200 focus:outline-none focus:ring-2 focus:ring-mint-200 focus:ring-offset-2 focus:ring-offset-grey-400 ${
+      className={`w-[320px] lg:w-[500px] h-full rounded-lg border-dashed border-2 hover:border-mint-100 hover:bg-grey-500 duration-200 focus:outline-none focus:ring-2 focus:ring-mint-200 focus:ring-offset-2 focus:ring-offset-grey-400 animate-slideIn ${
         isDragActive ? 'bg-grey-500 border-mint-100' : 'border-grey-200'
       }`}
     >

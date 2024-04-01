@@ -47,7 +47,7 @@ export function HasFileForm({ imageFile, removeFile, onImageUploaded }: HasFileP
   return (
     <form onSubmit={handleUploadImage}>
       <div
-        className={`w-[320px] lg:w-[500px] h-full p-5 rounded-lg border-dashed border-2 border-grey-200 hover:border-grey-100 hover:bg-grey-500 transition-colors focus:outline-none focus:ring-2 focus:ring-mint-200 focus:ring-offset-2 focus:ring-offset-grey-400`}
+        className={`w-[320px] lg:w-[500px] h-full p-5 rounded-lg border-dashed border-2 border-grey-200 hover:border-grey-100 hover:bg-grey-500 transition-colors focus:outline-none focus:ring-2 focus:ring-mint-200 focus:ring-offset-2 focus:ring-offset-grey-400 animate-slideIn`}
       >
         <div className="w-full p-4 flex items-center justify-between gap-3 rounded-md shadow-md bg-grey-400 mb-10">
           <span className="text-md text-white-200 text-start overflow-hidden whitespace-nowrap text-ellipsis">

@@ -2,7 +2,7 @@ import { Divider } from './divider'
 
 export function Footer() {
   return (
-    <footer className="w-full px-[50px]">
+    <footer className="w-full px-[50px] animate-downTop">
       <Divider />
 
       <p className="text-grey-100 text-xs lg:text-sm text-center py-5">

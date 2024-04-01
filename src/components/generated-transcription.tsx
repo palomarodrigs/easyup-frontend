@@ -32,7 +32,7 @@ export function GeneratedTranscription({
   }, [transcription])
 
   return (
-    <main className="w-[320px] lg:w-[500px] h-full p-5 rounded-lg bg-grey-500">
+    <main className="w-[320px] lg:w-[500px] h-full p-5 rounded-lg bg-grey-500 animate-slideIn">
       <section className="flex flex-col gap-3 mb-5">
         <article className="flex items-center justify-between">
           <span className="text-md text-grey-100 overflow-hidden whitespace-nowrap text-ellipsis">
