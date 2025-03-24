@@ -22,7 +22,7 @@ easyup is a tool that allows you to upload images and use artificial intelligenc
 
 ## 🚀 Deploy
 
-You can access the project through [this link](https://easyup-ai.vercel.app/)
+You can access the project through [this link](https://ai-easyup-frontend.vercel.app/)
 
 ---
 
